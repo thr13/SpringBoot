@@ -29,6 +29,10 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	testCompileOnly 'org.projectlombok:lombok'
 	testAnnotationProcessor 'org.projectlombok:lombok'
+
+	//커스텀 라이브러리
+//	implementation files('libs/memory-0.0.1.jar')
+	implementation files('libs/memoryV2.jar')
 }
 
 tasks.named('test') {
