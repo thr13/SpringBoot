@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Import;
 //@Import(MyDataSourceConfigV1.class)
 //@Import(MyDataSourceConfigV2.class)
 @Import(MyDataSourceConfigV3.class)
-@SpringBootApplication(scanBasePackages = "com.boot.datasource")
+@SpringBootApplication(scanBasePackages = {"com.boot.datasource", "com.boot.pay"})
 //@ConfigurationPropertiesScan({"com.boot"})
 public class BootApplication {
 
