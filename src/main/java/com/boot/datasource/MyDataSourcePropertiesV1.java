@@ -11,7 +11,7 @@ import java.util.List;
  * @ConfigurationProperties 을 사용하면 타입 안전한 설정 속성을 사용할 수 있다
  */
 @Data
-@ConfigurationProperties("my.datasource")
+//@ConfigurationProperties("my.datasource")
 public class MyDataSourcePropertiesV1 {
 
     private String url;
