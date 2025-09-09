@@ -1,13 +1,18 @@
 package com.boot;
 
+import com.boot.config.MyDataSourceConfigV1;
 import com.boot.config.MyDataSourceEnvConfig;
 import com.boot.config.MyDataSourceValueConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.context.annotation.Import;
 
-@Import(MyDataSourceValueConfig.class)
+//@Import(MyDataSourceEnvConfig.class)
+//@Import(MyDataSourceValueConfig.class)
+@Import(MyDataSourceConfigV1.class)
 @SpringBootApplication(scanBasePackages = "com.boot.datasource")
+@ConfigurationPropertiesScan({"com.boot"})
 public class BootApplication {
 
 	public static void main(String[] args) {
