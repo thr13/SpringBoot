@@ -1,37 +1,29 @@
-my:
-    datasource:
-      url: local.db.com
-      username: local_user
-      password: local_pw
-      etc:
-        maxConnection: 2
-        timeout: 60s
-        options: LOCAL, CACHE
----
-spring:
-  config:
-    activate:
-      on-profile: dev
-my:
-  datasource:
-    url: dev.db.com
-    username: dev_user
-    password: dev_pw
-    etc:
-      maxConnection: 10
-      timeout: 60s
-      options: DEV, CACHE
----
-spring:
-  config:
-    activate:
-      on-profile: prod
-my:
-  datasource:
-    url: prod.db.com
-    username: prod_user
-    password: prod_pw
-    etc:
-      maxConnection: 50
-      timeout: 10s
-      options: PROD, CACHE
+management:
+  info:
+    java:
+      enabled: true
+    os:
+      enabled: true
+    env:
+      enabled: true
+  server:
+    port: 8080
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+#      show-details: always
+      show-components: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+info:
+  app:
+    name: hello-actuator
+    company: yh
+
+logging:
+  level:
+    com.boot.actuator.controller: debug

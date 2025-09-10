@@ -2,16 +2,18 @@ package com.boot;
 
 import com.boot.config.*;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.actuate.web.exchanges.InMemoryHttpExchangeRepository;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 
 //@Import(MyDataSourceEnvConfig.class)
 //@Import(MyDataSourceValueConfig.class)
 //@Import(MyDataSourceConfigV1.class)
 //@Import(MyDataSourceConfigV2.class)
-@Import(MyDataSourceConfigV3.class)
-@SpringBootApplication(scanBasePackages = {"com.boot.datasource", "com.boot.pay"})
+//@Import(MyDataSourceConfigV3.class)
+@SpringBootApplication(scanBasePackages = "com.boot.actuator")
 //@ConfigurationPropertiesScan({"com.boot"})
 public class BootApplication {
 
@@ -19,4 +21,8 @@ public class BootApplication {
 		SpringApplication.run(BootApplication.class, args);
 	}
 
+	@Bean
+	public InMemoryHttpExchangeRepository httpExchangeRepository() {
+		return new InMemoryHttpExchangeRepository();
+	}
 }
