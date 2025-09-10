@@ -10,7 +10,7 @@ import java.time.Duration;
 import java.util.List;
 
 /**
- * application.properties 에 설정한 변수를 Environment 를 이용하여 출력(수동방식)
+ * application-temp.properties 에 설정한 변수를 Environment 를 이용하여 출력(수동방식)
  */
 @Slf4j
 @Configuration

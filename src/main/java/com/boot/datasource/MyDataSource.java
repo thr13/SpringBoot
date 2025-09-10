@@ -7,7 +7,7 @@ import java.time.Duration;
 import java.util.List;
 
 /**
- * application.properties 에 설정한 변수를 담을 객체
+ * application-temp.properties 에 설정한 변수를 담을 객체
  */
 @Slf4j
 public class MyDataSource {
