@@ -1,12 +1,9 @@
 package com.boot;
 
-import com.boot.config.*;
-import com.boot.metric.order.v0.OrderConfigV0;
-import com.boot.metric.order.v1.OrderConfigV1;
+import com.boot.metric.order.v2.OrderConfigV2;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.actuate.web.exchanges.InMemoryHttpExchangeRepository;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 
@@ -16,16 +13,16 @@ import org.springframework.context.annotation.Import;
 //@Import(MyDataSourceConfigV2.class)
 //@Import(MyDataSourceConfigV3.class)
 //@ConfigurationPropertiesScan({"com.boot"})
-@Import(OrderConfigV1.class)
+@Import(OrderConfigV2.class)
 @SpringBootApplication(scanBasePackages = "com.boot.metric.controller")
 public class BootApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(BootApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(BootApplication.class, args);
+    }
 
-	@Bean
-	public InMemoryHttpExchangeRepository httpExchangeRepository() {
-		return new InMemoryHttpExchangeRepository();
-	}
+    @Bean
+    public InMemoryHttpExchangeRepository httpExchangeRepository() {
+        return new InMemoryHttpExchangeRepository();
+    }
 }
