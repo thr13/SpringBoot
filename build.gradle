@@ -31,6 +31,9 @@ dependencies {
 	//프로메테우스
 	implementation 'io.micrometer:micrometer-registry-prometheus'
 
+	//AspectJ
+	implementation 'org.springframework.boot:spring-boot-starter-aop'
+
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
