@@ -1,6 +1,6 @@
 package com.boot;
 
-import com.boot.metric.order.v2.OrderConfigV2;
+import com.boot.metric.order.v3.OrderConfigV3;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.actuate.web.exchanges.InMemoryHttpExchangeRepository;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Import;
 //@Import(MyDataSourceConfigV2.class)
 //@Import(MyDataSourceConfigV3.class)
 //@ConfigurationPropertiesScan({"com.boot"})
-@Import(OrderConfigV2.class)
+@Import(OrderConfigV3.class)
 @SpringBootApplication(scanBasePackages = "com.boot.metric.controller")
 public class BootApplication {
 
